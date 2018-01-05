@@ -2,25 +2,25 @@
 *By silverbass#2407*
 
 | Level | Proficiency Bonus | Features                    | Cantrips Known | Spells Known | 1st | 2nd | 3rd | 4th |
-|-------|-------------------|-----------------------------|----------------|--------------|-----|-----|-----|-----|
+|:-----:|:-----------------:|-----------------------------|:--------------:|:------------:|:---:|:---:|:---:|:---:|
 | 1st   | +2                | [Fighting Style](#fighting-style), [Second Wind](#second-wind) | —              | —            | —   | —   | —   | —   |
 | 2nd   | +2                | [Action Surge](#action-surge) | —              | —            | —   | —   | —   | —   |
-| 3rd   | +2                | Martial Archetype           | 2              | 3            | 2   | —   | —   | —   |
+| 3rd   | +2                | [Martial Archetype](#martal-archetype)           | 2              | 3            | 2   | —   | —   | —   |
 | 4th   | +2                | [Ability Score Improvement](#ability-score-improvement) | 2              | 4            | 3   | —   | —   | —   |
 | 5th   | +3                | [Extra Attack](#extra-attack)              | 2              | 4            | 3   | —   | —   | —   |
 | 6th   | +3                | [Ability Score Improvement](#ability-score-improvement) | 2              | 4            | 3   | —   | —   | —   |
-| 7th   | +3                | Martial Archetype feature   | 2              | 5            | 4   | 2   | —   | —   |
+| 7th   | +3                | [Martial Archetype feature](#martal-archetype)   | 2              | 5            | 4   | 2   | —   | —   |
 | 8th   | +3                | [Ability Score Improvement](#ability-score-improvement) | 2              | 6            | 4   | 2   | —   | —   |
 | 9th   | +4                | [Indomitable](#indomitable)                 | 2              | 6            | 4   | 2   | —   | —   |
-| 10th  | +4                | Martial Archetype feature   | 3              | 7            | 4   | 3   | —   | —   |
+| 10th  | +4                | [Martial Archetype feature](#martal-archetype)   | 3              | 7            | 4   | 3   | —   | —   |
 | 11th  | +4                | [Extra Attack (2)](#extra-attack)            | 3              | 8            | 4   | 3   | —   | —   |
 | 12th  | +4                | [Ability Score Improvement](#ability-score-improvement) | 3              | 8            | 4   | 3   | —   | —   |
 | 13th  | +5                | [Indomitable (two uses)](#indomitable)      | 3              | 9            | 4   | 3   | 2   | —   |
 | 14th  | +5                | [Ability Score Improvement](#ability-score-improvement) | 3              | 10           | 4   | 3   | 2   | —   |
-| 15th  | +5                | Martial Archetype feature   | 3              | 10           | 4   | 3   | 2   | —   |
+| 15th  | +5                | [Martial Archetype feature](#martal-archetype)   | 3              | 10           | 4   | 3   | 2   | —   |
 | 16th  | +5                | [Ability Score Improvement](#ability-score-improvement) | 3              | 11           | 4   | 3   | 3   | —   |
 | 17th  | +6                | [Action Surge (two uses)](#action-surge), [Indomitable (three uses)](#indomitable)   | 3              | 11           | 4   | 3   | 3   | —   |
-| 18th  | +6                | Martial Archetype feature   | 3              | 11           | 4   | 3   | 3   | —   |
+| 18th  | +6                | [Martial Archetype feature](#martal-archetype)   | 3              | 11           | 4   | 3   | 3   | —   |
 | 19th  | +6                | [Ability Score Improvement](#ability-score-improvement) | 3              | 12           | 4   | 3   | 3   | 1   |
 | 20th  | +6                | [Extra Attack (3)](#extra-attack)             | 3              | 13           | 4   | 3   | 3   | 1   |
 
@@ -63,6 +63,15 @@ Modify your character sheet to have an "Offhand Attack", and add your ability mo
 ```
 **Use With:** ``!asurge``
 
+## Martial Archetype
+At 3rd level, you choose an archetype from the list available that you strive to emulate in your combat styles and techniques. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level.
+* [Arcane Archer]()
+* [Battle Master]()
+* [Cavalier]()
+* [Champion]()
+* [Eldritch Knight]()
+* [Purple Dragon Knight (Banneret)]()
+* [Samurai]()
 
 ## Ability Score Improvement
 Modify your character sheet to increase one ability score by 2, or increase two ability scores by 1. As normal, you can't increase an ability score above 20 using this feature.
