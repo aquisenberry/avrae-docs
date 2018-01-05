@@ -25,23 +25,24 @@
 | 20th  | +6                | [Extra Attack (3)](#extra-attack)             | 3              | 13           | 4   | 3   | 3   | 1   |
 
 ## Fighting Style
-#### Archery
+### Archery
 Modify your character sheet to have a +2 to hit on attack rolls with ranged weapons.
 
-#### Defense
+### Defense
 Modify your character sheet to have a +1 bonus to AC if they are wearing armor.
 
-#### Great Weapon Fighting
+### Great Weapon Fighting
 Modify your character sheet to such that the damage dice uses the ``ro1ro2`` tag.  
 *Example:* ``1d12ro1ro2 + 4 [slashing]``
 
-#### Protection
+### Protection
+**Alias:**  
 ```
 !alias protection embed -title "<name> uses the Protection Fighting Style!" -desc "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield."
 ```
 **Use With:** ``!protection``
 
-#### Two-Weapon Fighting
+### Two-Weapon Fighting
 Modify your character sheet to have an "Offhand Attack", and add your ability modifier to the damage on that attack.
 
 ## Second Wind
