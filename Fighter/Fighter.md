@@ -56,7 +56,7 @@ Modify your character sheet to have an "Offhand Attack", and add your ability mo
 
 ## Action Surge
 
-**Custom Counters Required:** ``!cc create "Action Surge" -min 0 -max 1 -type bubble -reset short`` Change the ``1`` to ``2`` at level 17.
+**Custom Counters Required:** ``!cc create "Action Surge" -min 0 -max 1 -type bubble -reset short`` Change the ``1`` to ``2`` at level 17.  
 **Alias:**
 ```
 !alias asurge embed {{set("counter", "Action Surge")}} {{mod_cc(counter, -1, True)}} -title "<name> uses {{counter}}!" -desc "On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again. (PHB 72)" -f "{{counter}}|〇" -color <color> -thumb <image>
@@ -78,7 +78,7 @@ You can roll multiple attacks in Avrae at once using the ``-rr #`` command.
 *Example:* ``!init attack <target> Longsword -rr 2``
 
 ## Indomitable
-**Custom Counters Required:** ``!cc create "Indomitable" -min 0 -max 1 -type bubble -reset long``  Change the ``1`` to ``2`` at level 13, and to ``3`` at level 17. 
+**Custom Counters Required:** ``!cc create "Indomitable" -min 0 -max 1 -type bubble -reset long``  Change the ``1`` to ``2`` at level 13, and to ``3`` at level 17.  
 **Alias:**
 ```
 !alias indomitable embed {{set("counter", "Indomitable")}} {{mod_cc(counter, -1, True)}} -title "<name> uses {{counter}}!" -desc "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can’t use this feature again until you finish a long rest. *(PHB 72)*" -f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}" -color <color> -thumb <image>
