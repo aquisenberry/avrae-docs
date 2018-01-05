@@ -38,7 +38,7 @@ Modify your character sheet to such that the damage dice uses the ``ro1ro2`` tag
 ### Protection
 **Alias:**  
 ```
-!alias protection embed -title "<name> uses the Protection Fighting Style!" -desc "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield."
+!alias protection embed -title "<name> uses the Protection Fighting Style!" -desc "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield." -thumb <image>
 ```
 **Use With:** ``!protection``
 
@@ -50,16 +50,16 @@ Modify your character sheet to have an "Offhand Attack", and add your ability mo
 **Custom Counters Required:** ``!cc create "Second Wind" -min 0 -max 1 -type bubble -reset short``  
 **Alias:**
 ```
-!alias 2nd embed {{set("counter", "Second Wind")}} {{mod_cc(counter, -1, True)}} {{set("heal", vroll("1d10+"+str(level)))}} {{set_hp(min(hp, heal.total + currentHp))}} -title "<name> uses {{counter}}!" -desc "On your turn, you can use a bonus action to regain 1d10 + {level} HP. Once you use this feature, you must finish a short or long rest before you can use it again. *(PHB 72)*" -f "Healing Recieved|{{str(heal)}}" -f "Hit Points|{{get_hp()}} / {{hp}}" -f "{{counter}}|〇" -color <color>
+!alias 2nd embed {{set("counter", "Second Wind")}} {{mod_cc(counter, -1, True)}} {{set("heal", vroll("1d10+"+str(level)))}} {{set_hp(min(hp, heal.total + currentHp))}} -title "<name> uses {{counter}}!" -desc "On your turn, you can use a bonus action to regain 1d10 + {level} HP. Once you use this feature, you must finish a short or long rest before you can use it again. *(PHB 72)*" -f "Healing Recieved|{{str(heal)}}" -f "Hit Points|{{get_hp()}} / {{hp}}" -f "{{counter}}|〇" -color <color> -thumb <image>
 ```
 **Use With:** ``!2nd``
 
 ## Action Surge
 
-**Custom Counters Required:** ``!cc create "Action Surge" -min 0 -max 1 -type bubble -reset short``  
+**Custom Counters Required:** ``!cc create "Action Surge" -min 0 -max 1 -type bubble -reset short`` Change the ``1`` to ``2`` at level 17.
 **Alias:**
 ```
-!alias asurge embed {{set("counter", "Action Surge")}} {{mod_cc(counter, -1, True)}} -title "<name> uses {{counter}}!" -desc "On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again. (PHB 72)" -f "{{counter}}|〇" -color <color>
+!alias asurge embed {{set("counter", "Action Surge")}} {{mod_cc(counter, -1, True)}} -title "<name> uses {{counter}}!" -desc "On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again. (PHB 72)" -f "{{counter}}|〇" -color <color> -thumb <image>
 ```
 **Use With:** ``!asurge``
 
@@ -78,9 +78,9 @@ You can roll multiple attacks in Avrae at once using the ``-rr #`` command.
 *Example:* ``!init attack <target> Longsword -rr 2``
 
 ## Indomitable
-**Custom Counters Required:** ``!cc create "Indomitable" -min 0 -max 1 -type bubble -reset long``  
+**Custom Counters Required:** ``!cc create "Indomitable" -min 0 -max 1 -type bubble -reset long``  Change the ``1`` to ``2`` at level 13, and to ``3`` at level 17. 
 **Alias:**
 ```
-!alias indomitable embed {{set("counter", "Indomitable")}} {{mod_cc(counter, -1, True)}} -title "<name> uses {{counter}}!" -desc "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can’t use this feature again until you finish a long rest. *(PHB 72)*" -f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}" -color <color>
+!alias indomitable embed {{set("counter", "Indomitable")}} {{mod_cc(counter, -1, True)}} -title "<name> uses {{counter}}!" -desc "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can’t use this feature again until you finish a long rest. *(PHB 72)*" -f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}" -color <color> -thumb <image>
 ```
 **Use With:** ``!indomitable``
