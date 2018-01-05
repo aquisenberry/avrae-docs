@@ -1,6 +1,6 @@
 # Feats
 
-Not all of the feats found in the PhB, XGtE, EEPC, and UA releases are presented here, as many consist of having advantage in certain particular situations, or offering some passive effect. Instead, we have created aliases for some of the feats that have *active*, *noticable* effects.
+Not all of the feats found in the PHB, XGtE, EEPC, and UA releases are presented here, as many consist of having advantage in certain particular situations, or offering some passive effect. Instead, we have created aliases for some of the feats that have *active*, *noticable* effects.
 * [Defensive Duelist](#defensive-duelist)
 * [Durable](#durable)
 * [Elemental Adept](#elemental-adept)
