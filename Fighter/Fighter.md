@@ -113,6 +113,6 @@ To quickly make a level 20 fighter, copy and paste the alias below. This section
 ```
 * To make a fighter of level 1, remove everything past the ``!alias 2nd ...``  
 * To make a fighter of level 2-8, remove everything past the ``!alias asurge...`` and adjust the ``-max 2`` to ``-max 1``
-* To make a fighter of level 9-12, adjust the ``-max 2`` to ``-max 1`` for the ``!cc create "Action Surge"...`` and adjust the ``-max 3`` to ``-max 2`` for the ``!cc create "Indomitable"...``
-* To make a fighter of level 13-16, adjust the ``-max 2`` to ``-max 1`` for the ``!cc create "Action Surge"...``
+* To make a fighter of level 9-12, adjust the ``-max 2`` to ``-max 1`` for the ``!cc create "Action Surge"...`` and adjust the ``-max 3`` to ``-max 1`` for the ``!cc create "Indomitable"...``
+* To make a fighter of level 13-16, adjust the ``-max 2`` to ``-max 1`` for the ``!cc create "Action Surge"...`` and adjust the ``-max 3`` to ``-max 2`` for the ``!cc create "Indomitable"...``
 * To make a fighter of level 17-20, copy the entire ``!multiline`` as is.
