@@ -7,6 +7,6 @@ A description of what the alias/snippet does, how to use it, and any setup requi
 `Avrae commands to run to set up. Optional.`
 
 ### Code
-```
+```GN
 !alias name {{"Avrae code to create the alias goes here."}}
 ```
