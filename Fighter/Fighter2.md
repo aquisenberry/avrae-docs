@@ -26,7 +26,7 @@ If you are multiclassing with a non-DiceCloud sheet, run the following command, 
 !cvar FighterLevel flvl
 ```
 
-If there are two boxes of code, use the DiceCloud box instead of the Alternative box. In addition, whenever you gain a level in fighter, run the command again, replacing ``flvl`` with your new fighter level. This will update all of your aliases with your new fighter level.
+If there are two boxes of code, use the DiceCloud box instead of the Alternative box. **IMPORTANT:** In addition, whenever you gain a level in fighter, run the command again, replacing ``flvl`` with your new fighter level. This will update all of your aliases with your new fighter level.
 
 #### (Optional) Color
 
