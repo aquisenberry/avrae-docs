@@ -1,9 +1,9 @@
 # Hit Dice
-*By @Toothless#7854.*
+*By @Toothless#7854*
 
 Displays text and page number for Hit Dice. Subtracts from Hit Dice counter and rolls hit dice, then adds result rolled to current hit points. Returns error if attempting to spend more hit dice than remaining.
 
-#### Prerequisites
+### Prerequisites
 
 A DiceCloud feature called "Hit Dice (``$die$``)", replacing ``$die$`` with the size of your Hit Die. Give it ``$name$Level`` uses, replacing ``$name$`` with the name of the class your Hit Die is from. Do not include ``short rest`` or ``long rest`` in your feature, as you only regain half your Hit Dice on a long rest.
 
@@ -36,7 +36,7 @@ Alternatively, you can run the following alias. Usage is ``!hdr $die$ $num$``, r
 -color <color>
 ```
 
-#### Usage
+### Usage
 
 ``!hd <die> <num>``
 
@@ -46,7 +46,7 @@ Alternatively, you can run the following alias. Usage is ``!hdr $die$ $num$``, r
 *Example:* ``!hd d10 2``
 
 
-#### Code
+### Code
 
 ```GN
 !alias hd embed 
