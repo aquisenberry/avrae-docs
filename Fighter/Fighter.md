@@ -69,7 +69,7 @@ Modify your character sheet to have an "Offhand Attack", and add your ability mo
 -f "{{counter}}|〇" 
 -color <color> -thumb <image>
 ```
-**Use With:** 
+**Use With:**  
 ``!2nd``
 
 ## Action Surge
@@ -88,7 +88,7 @@ Change the ``-max 1`` to ``-max 2`` at level 17.
 -f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}" 
 -color <color> -thumb <image>
 ```
-**Use With:** 
+**Use With:**  
 ``!asurge``
 
 ## Martial Archetype
@@ -112,7 +112,7 @@ When you take a turn in combat, you can attack twice, instead of once, whenever 
 The number of attacks increases to three when you reach 11th level in this class and to four when you reach 20th level in this class.
 
 You can roll multiple attacks in Avrae at once using the ``-rr #`` command.  
-*Example:* 
+*Example:*  
 ``!init attack <target> Longsword -rr 2``
 
 ## Indomitable
@@ -130,7 +130,7 @@ Change the ``-max 1`` to ``-max 2`` at level 13, and to ``-max 3`` at level 17.
 -f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}" 
 -color <color> -thumb <image>
 ```
-**Use With:** 
+**Use With:**  
 ``!indomitable``
 
 # Creating a Quick Fighter
