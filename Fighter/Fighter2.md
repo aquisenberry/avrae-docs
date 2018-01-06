@@ -189,6 +189,8 @@ A DiceCloud feature called "Action Surge" with ``1+floor(FighterLevel/17)`` uses
 !cc create "Action Surge" -min 0 -max <uses> -reset short -type bubble
 ```
 
+To reset your Action Surge, type ``!g [shortrest|sr]`` or ``!g [longrest|lr]``.
+
 #### Code
 
 ```GN
@@ -213,6 +215,8 @@ A DiceCloud feature called "Indomitable" with ``1+floor(FighterLevel/13)+floor(F
 ```GN
 !cc create "Indomitable" -min 0 -max <uses> -reset long -type bubble
 ```
+
+To reset your Indomitable, type ``!g [longrest|lr]``.
 
 #### Code
 
