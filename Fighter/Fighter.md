@@ -85,7 +85,7 @@ Change the ``-max 1`` to ``-max 2`` at level 17.
 {{mod_cc(counter, -1, True)}} 
 -title "<name> uses {{counter}}!" 
 -desc "On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again. (PHB 72)" 
--f "{{counter}}|〇" 
+-f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}" 
 -color <color> -thumb <image>
 ```
 **Use With:** 
@@ -104,7 +104,7 @@ At 3rd level, you choose an archetype from the list available that you strive to
 ## Ability Score Improvement
 Modify your character sheet to increase one ability score by 2, or increase two ability scores by 1. As normal, you can't increase an ability score above 20 using this feature.
 
-If your DM allows it, you may instead take a [feat]().  
+If your DM allows it, you may instead take a [feat](https://github.com/mommothazaz123/avrae-docs/blob/master/Misc/Feats.md).  
 
 ## Extra Attack
 When you take a turn in combat, you can attack twice, instead of once, whenever you take the Attack action on your turn.
@@ -134,9 +134,6 @@ Change the ``-max 1`` to ``-max 2`` at level 13, and to ``-max 3`` at level 17.
 ``!indomitable``
 
 # Creating a Quick Fighter
-
-~~***Admin Note:*** *This section is really messy... reformat.*~~  
-***Formatter Note:*** *Better?*
 
 To quickly set up your fighter with avrae, copy and paste the relevant below. You only need to enter one of the following code blocks. For example, for a 11th level fighter, you'd only enter the ``9th-12th Level Fighter`` section.
 
