@@ -10,7 +10,7 @@ Now, scroll down and find the commands you want. You do not need to use every co
 
 When you find a command you want, copy the text in the **Code** box. Paste and send the text in a channel Avrae can read, or in Direct Messages to it. If there are two code blocks, use the **DiceCloud** box if your sheet is on DiceCloud. Otherwise, use the **Alternative** box.
 
-To change the command name, replace the word following ``alias`` or ``snippet`` such as ``bsw`` in ``!alias bsw``. To use an alias, type the command name, such as ``!bsw``. To use a snippet, type ``!a weapon snippet``, replacing ``weapon`` with a weapon on your character sheet, and ``snippet`` with the name of your snippet.
+To change the command name, replace the word following ``alias`` or ``snippet`` such as ``bsw`` in ``!alias bsw``. To use an alias, type the command name, such as ``!bsw``. To use a snippet, type ``!a $weapon$ $snippet$``, replacing ``$weapon$`` with a weapon on your character sheet, and ``$snippet$`` with the name of your snippet.
 
 If there is a **Prerequisites** box, paste and send that command as well. Fill out any fields the description asks of you. You do not need to do this if you are using a DiceCloud sheet and you linked your features to your counters as described in [Creating a Character](#creating-a-character).
 
