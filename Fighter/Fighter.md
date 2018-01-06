@@ -53,7 +53,7 @@ Modify your character sheet to have an "Offhand Attack", and add your ability mo
 
 ## Second Wind
 
-**Custom Counters Required:** 
+**Custom Counters Required:**  
 ``!cc create "Second Wind" -min 0 -max 1 -type bubble -reset short``  
 
 **Alias:**
@@ -74,7 +74,7 @@ Modify your character sheet to have an "Offhand Attack", and add your ability mo
 
 ## Action Surge
 
-**Custom Counters Required:** 
+**Custom Counters Required:**  
 ``!cc create "Action Surge" -min 0 -max 1 -type bubble -reset short`` 
 Change the ``-max 1`` to ``-max 2`` at level 17.  
 
@@ -116,7 +116,7 @@ You can roll multiple attacks in Avrae at once using the ``-rr #`` command.
 ``!init attack <target> Longsword -rr 2``
 
 ## Indomitable
-**Custom Counters Required:** 
+**Custom Counters Required:**  
 ``!cc create "Indomitable" -min 0 -max 1 -type bubble -reset long``  
 Change the ``-max 1`` to ``-max 2`` at level 13, and to ``-max 3`` at level 17.  
 
