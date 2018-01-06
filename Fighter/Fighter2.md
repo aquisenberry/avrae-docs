@@ -20,22 +20,22 @@ You can set up your fighter aliases quickly by clicking this [link](#creating-a-
 
 #### Multiclassing with Alternative Sheets
 
-If you are multiclassing with a non-DiceCloud sheet, run the following command, replacing ``flvl`` with your current fighter level.
+If you are multiclassing with a non-DiceCloud sheet, run the following command, replacing ``<flvl>`` with your current fighter level.
 
 ```GN
-!cvar FighterLevel flvl
+!cvar FighterLevel <flvl>
 ```
 
-If there are two boxes of code, use the DiceCloud box instead of the Alternative box. **IMPORTANT:** In addition, whenever you gain a level in fighter, run the command again, replacing ``flvl`` with your new fighter level. This will update all of your aliases with your new fighter level.
+If there are two boxes of code, use the DiceCloud box instead of the Alternative box. **IMPORTANT:** In addition, whenever you gain a level in fighter, run the command again, replacing ``<flvl>`` with your new fighter level. This will update all of your aliases with your new fighter level.
 
 #### (Optional) Color
 
-You can also set up a color by sending the following code to Avrae, replacing ``hex`` with a [color hex code](https://www.webpagefx.com/web-design/color-picker/). Do not include the hashtag (#). You do not need to run this for commands to function properly.
+You can also set up a color by sending the following code to Avrae, replacing ``<hex>`` with a [color hex code](https://www.webpagefx.com/web-design/color-picker/). Do not include the hashtag (#). You do not need to run this for commands to function properly.
 
 ```GN
 !multiline
-!csettings color hex
-!cvar color hex
+!csettings color <hex>
+!cvar color <hex>
 ```
 
 
@@ -76,13 +76,13 @@ Displays text and page number for Hit Dice. Subtracts from Hit Dice counter and 
 
 A DiceCloud feature called "Hit Dice (d10)" with ``FighterLevel`` number of uses. Do not include ``short rest`` or ``long rest`` in your feature, as you only regain half your Hit Dice on a long rest.
 
-Alternatively, run the following code, replacing ``flvl`` with your current fighter level. **IMPORTANT:** Whenever you gain a level in fighter, run this command again.
+Alternatively, run the following code, replacing ``<flvl>`` with your current fighter level. **IMPORTANT:** Whenever you gain a level in fighter, run this command again.
 
 ```GN
-!cc create "Hit Dice (d10)" -min 0 -max flvl -type default
+!cc create "Hit Dice (d10)" -min 0 -max <flvl> -type default
 ```
 
-To reset your hit dice, you can run the following alias. Usage is ``!hdr die num``, replacing ``die`` with a die size (such as ``d10``), and ``num`` with a number, such as ``3``. An example of this is ``!hdr d10 3``.
+To reset your hit dice, you can run the following alias. Usage is ``!hdr <die> <num>``, replacing ``<die>`` with a die size (such as ``d10``), and ``<num>`` with a number, such as ``3``. An example of this is ``!hdr d10 3``.
 
 ```GN
 !alias hdr embed {{mod_cc("Hit Dice (%1%)", %2%)}} -title "<name> regains spent Hit Dice!" -desc "At the end of a long rest, you regain spent Hit Dice, up to a number of dice equal to half your total number of them." -f "Hit Dice (%1%)|{{get_cc("Hit Dice (%1%)")}} / {{get_cc_max("Hit Dice (%1%)")}}" -footer "Adventuring | PHB 186" -color <color>
