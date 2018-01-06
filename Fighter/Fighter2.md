@@ -82,7 +82,7 @@ Alternatively, run the following code, replacing ``<flvl>`` with your current fi
 !cc create "Hit Dice (d10)" -min 0 -max <flvl> -type default
 ```
 
-To reset your hit dice, you can run the following alias. Usage is ``!hdr <die> <num>``, replacing ``<die>`` with a die size (such as ``d10``), and ``<num>`` with a number, such as ``3``. An example of this is ``!hdr d10 3``.
+To regain hit dice, you can run the following alias. Usage is ``!hdr <die> <num>``, replacing ``<die>`` with a die size (such as ``d10``), and ``<num>`` with a number, such as ``3``. An example of this is ``!hdr d10 3``.
 
 ```GN
 !alias hdr embed {{mod_cc("Hit Dice (%1%)", %2%)}} -title "<name> regains spent Hit Dice!" -desc "At the end of a long rest, you regain spent Hit Dice, up to a number of dice equal to half your total number of them." -f "Hit Dice (%1%)|{{get_cc("Hit Dice (%1%)")}} / {{get_cc_max("Hit Dice (%1%)")}}" -footer "Adventuring | PHB 186" -color <color>
