@@ -74,7 +74,9 @@ Displays text and page number for Hit Dice. Subtracts from Hit Dice counter and 
 
 #### Prerequisites
 
-A DiceCloud feature called "Hit Dice (d10)" with ``FighterLevel`` number of uses, or the following code run, replacing ``flvl`` with your current fighter level. **IMPORTANT:** Whenever you gain a level in fighter, run this command again.
+A DiceCloud feature called "Hit Dice (d10)" with ``FighterLevel`` number of uses. Do not include ``short rest`` or ``long rest`` in your feature, as you only regain half your Hit Dice on a long rest.
+
+Alternatively, run the following code, replacing ``flvl`` with your current fighter level. **IMPORTANT:** Whenever you gain a level in fighter, run this command again.
 
 ```GN
 !cc create "Hit Dice (d10)" -min 0 -max flvl -type default
@@ -88,7 +90,13 @@ To reset your hit dice, you can run the following alias. Usage is ``!hdr die num
 
 #### Usage
 
-Usage is ``!hd die num``, replacing ``die`` with a die size (such as ``d10``), and ``num`` with the number of hit dice you are expending, such as ``2``. An example of this is ``!hd d10 2``.
+``!hd <die> <num>``
+
+``<die>`` - Die size (ex. ``d10``)
+
+``<num>`` - Number of hit dice you are expending (ex. ``2``)
+
+*Example:* ``!hd d10 2``
 
 
 #### Code
@@ -105,18 +113,13 @@ Displays text and page number for Second Wind. Rolls 1d10 + your fighter level a
 
 #### Prerequisites
 
-A DiceCloud feature called "Second Wind" with ``1`` use, or the following code run.
+A DiceCloud feature called "Second Wind" with ``1`` use, with the words ``short rest`` in it. Alternatively, run the following code.
 
 ```GN
 !cc create "Second Wind" -min 0 -max 1 -reset short -type bubble
 ```
 
 To reset your Second Wind, type ``!g [shortrest|sr]`` or ``!g [longrest|lr]``.
-
-
-#### Usage
-
-Usage is ``!bsw``.
 
 #### Code
 
@@ -140,15 +143,11 @@ Displays text and page number for Action Surge. Subtracts 1 from Action Surge co
 
 #### Prerequisites
 
-A DiceCloud feature called "Action Surge" with ``1+floor(FighterLevel/17)`` uses, or the following code run, replacing ``uses`` with the number of Action Surge uses you have.
+A DiceCloud feature called "Action Surge" with ``1+floor(FighterLevel/17)`` uses, with the words ``short rest`` in it. Alternatively, run the following code, replacing ``<uses>`` with the number of Action Surge uses you have.
 
 ```GN
-!cc create "Action Surge" -min 0 -max uses -reset short -type bubble
+!cc create "Action Surge" -min 0 -max <uses> -reset short -type bubble
 ```
-
-#### Usage
-
-Usage is ``!bas``.
 
 #### Code
 
@@ -162,15 +161,11 @@ Displays text and page number for Indomitable. Subtracts 1 from Indomitable coun
 
 #### Prerequisites
 
-A DiceCloud feature called "Indomitable" with ``1+floor(FighterLevel/13)+floor(FighterLevel/17)`` uses, or the following code run, replacing ``uses`` with the number of Indomitable uses you have.
+A DiceCloud feature called "Indomitable" with ``1+floor(FighterLevel/13)+floor(FighterLevel/17)`` uses, with the words ``long rest`` in it. Alternatively, run the following code, replacing ``<uses>`` with the number of Indomitable uses you have.
 
 ```GN
-!cc create "Indomitable" -min 0 -max uses -reset short -type bubble
+!cc create "Indomitable" -min 0 -max <uses> -reset long -type bubble
 ```
-
-#### Usage
-
-Usage is ``!bi``.
 
 #### Code
 
