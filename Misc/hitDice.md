@@ -24,6 +24,8 @@ If you are multiclassing, run the following code instead, replacing ``$die$`` wi
 
 To regain hit dice, you can increment your counter using ``!cc Hit Dice ($die$) $num$``, replacing ``$die$`` with the size of your Hit Die, and replacing ``$num$`` with the number of Hit Dice you are regaining.
 
+*Example:* ``!cc Hit Dice (d10) 2``
+
 Alternatively, you can run the following alias. Usage is ``!hdr $die$ $num$``, replacing ``$die$`` with a die size (such as ``d10``), and ``$num$`` with a number, such as ``3``. An example of this is ``!hdr d10 3``.
 
 ```GN
