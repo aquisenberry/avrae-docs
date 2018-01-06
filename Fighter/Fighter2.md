@@ -85,7 +85,13 @@ Alternatively, run the following code, replacing ``<flvl>`` with your current fi
 To regain hit dice, you can run the following alias. Usage is ``!hdr <die> <num>``, replacing ``<die>`` with a die size (such as ``d10``), and ``<num>`` with a number, such as ``3``. An example of this is ``!hdr d10 3``.
 
 ```GN
-!alias hdr embed {{mod_cc("Hit Dice (%1%)", %2%)}} -title "<name> regains spent Hit Dice!" -desc "At the end of a long rest, you regain spent Hit Dice, up to a number of dice equal to half your total number of them." -f "Hit Dice (%1%)|{{get_cc("Hit Dice (%1%)")}} / {{get_cc_max("Hit Dice (%1%)")}}" -footer "Adventuring | PHB 186" -color <color>
+!alias hdr embed 
+{{mod_cc("Hit Dice (%1%)", %2%)}} 
+-title "<name> regains spent Hit Dice!" 
+-desc "At the end of a long rest, you regain spent Hit Dice, up to a number of dice equal to half your total number of them." 
+-f "Hit Dice (%1%)|{{get_cc("Hit Dice (%1%)")}} / {{get_cc_max("Hit Dice (%1%)")}}" 
+-footer "Adventuring | PHB 186" 
+-color <color>
 ```
 
 #### Usage
@@ -102,9 +108,19 @@ To regain hit dice, you can run the following alias. Usage is ``!hdr <die> <num>
 #### Code
 
 ```GN
-!alias hd embed {{mod_cc("Hit Dice (%1%)", -%2%, True)}} {{set("heal", vroll("%2%%1%+"+str(constitutionMod*%2%)))}} {{set_hp(min(hp, heal.total + currentHp))}} -title "<name> takes a Short Rest!" -desc "A character can spend one or more Hit Dice at the end of a short rest, up to the character's maximum number of Hit Dice, which is equal to the character's level. 
+!alias hd embed 
+{{mod_cc("Hit Dice (%1%)", -%2%, True)}} 
+{{set("heal", vroll("%2%%1%+"+str(constitutionMod*%2%)))}} 
+{{set_hp(min(hp, heal.total + currentHp))}} 
+-title "<name> takes a Short Rest!" 
+-desc "A character can spend one or more Hit Dice at the end of a short rest, up to the character's maximum number of Hit Dice, which is equal to the character's level. 
 
-For each Hit Die spent in this way, the player rolls the die and adds the character's Constitution modifier to it. The character regains hit points equal to the total." -f "Healing Recieved|{{heal}}" -f "Hit Points|{{get_hp()}} / {{hp}}" -f "Hit Dice (%1%)|{{get_cc("Hit Dice (%1%)")}} / {{get_cc_max("Hit Dice (%1%)")}}" -footer "Adventuring | PHB 186" -color <color>
+For each Hit Die spent in this way, the player rolls the die and adds the character's Constitution modifier to it. The character regains hit points equal to the total." 
+-f "Healing Recieved|{{heal}}" 
+-f "Hit Points|{{get_hp()}} / {{hp}}" 
+-f "Hit Dice (%1%)|{{get_cc("Hit Dice (%1%)")}} / {{get_cc_max("Hit Dice (%1%)")}}" 
+-footer "Adventuring | PHB 186" 
+-color <color>
 ```
 
 ## Second Wind
@@ -128,13 +144,27 @@ If your sheet is on DiceCloud, use the DiceCloud box. Otherwise, use the Alterna
 ###### DiceCloud
 
 ```GN
-!alias bsw embed {{set("counter", "Second Wind")}} {{mod_cc(counter, -1, True)}} {{set("lvl", FighterLevel)}} {{set("heal", vroll("1d10+"+str(lvl)))}} {{set_hp(min(hp, heal.total + currentHp))}} -title "<name> uses {{counter}}!" -desc "On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again." -f "Healing Recieved|{{str(heal)}}" -f "Hit Points|{{get_hp()}} / {{hp}}" -f "{{counter}}|〇" -footer "The Fighter | PHB 72" -color <color>
+!alias bsw embed 
+{{set("counter", "Second Wind")}} 
+{{mod_cc(counter, -1, True)}} 
+{{set("lvl", FighterLevel)}} 
+{{set("heal", vroll("1d10+"+str(lvl)))}} 
+{{set_hp(min(hp, heal.total + currentHp))}} 
+-title "<name> uses {{counter}}!" 
+-desc "On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again." 
+-f "Healing Recieved|{{str(heal)}}" 
+-f "Hit Points|{{get_hp()}} / {{hp}}" 
+-f "{{counter}}|〇" 
+-footer "The Fighter | PHB 72" 
+-color <color>
 ```
 
 ###### Alternative
 
 ```GN
-!alias bsw embed {{set("counter", "Second Wind")}} {{mod_cc(counter, -1, True)}} {{set("lvl", level)}} {{set("heal", vroll("1d10+"+str(lvl)))}} {{set_hp(min(hp, heal.total + currentHp))}} -title "<name> uses {{counter}}!" -desc "On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again." -f "Healing Recieved|{{str(heal)}}" -f "Hit Points|{{get_hp()}} / {{hp}}" -f "{{counter}}|〇" -footer "The Fighter | PHB 72" -color <color>
+!alias bsw embed 
+{{set("counter", "Second Wind")}} 
+{{mod_cc(counter, -1, True)}} {{set("lvl", level)}} {{set("heal", vroll("1d10+"+str(lvl)))}} {{set_hp(min(hp, heal.total + currentHp))}} -title "<name> uses {{counter}}!" -desc "On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again." -f "Healing Recieved|{{str(heal)}}" -f "Hit Points|{{get_hp()}} / {{hp}}" -f "{{counter}}|〇" -footer "The Fighter | PHB 72" -color <color>
 ```
 
 ## Action Surge
@@ -152,7 +182,14 @@ A DiceCloud feature called "Action Surge" with ``1+floor(FighterLevel/17)`` uses
 #### Code
 
 ```GN
-!alias bas embed {{set("counter", "Action Surge")}} {{mod_cc(counter, -1, True)}} -title "<name> uses {{counter}}!" -desc "On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again." -f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}" -footer "The Fighter | PHB 72" -color <color>
+!alias bas embed 
+{{set("counter", "Action Surge")}} 
+{{mod_cc(counter, -1, True)}} 
+-title "<name> uses {{counter}}!" 
+-desc "On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again." 
+-f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}" 
+-footer "The Fighter | PHB 72" 
+-color <color>
 ```
 
 ## Indomitable
@@ -170,5 +207,11 @@ A DiceCloud feature called "Indomitable" with ``1+floor(FighterLevel/13)+floor(F
 #### Code
 
 ```GN
-!alias bi embed {{set("counter", "Indomitable")}} {{mod_cc(counter, -1, True)}} -title "<name> uses {{counter}}!" -desc "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can’t use this feature again until you finish a long rest." -f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}" -footer "The Fighter | PHB 72" -color <color>
+!alias bi embed {{set("counter", "Indomitable")}} 
+{{mod_cc(counter, -1, True)}} 
+-title "<name> uses {{counter}}!" 
+-desc "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can’t use this feature again until you finish a long rest." 
+-f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}" 
+-footer "The Fighter | PHB 72" 
+-color <color>
 ```
