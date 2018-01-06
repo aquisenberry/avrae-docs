@@ -98,8 +98,7 @@ To regain hit dice, you can run the following alias. Usage is ``!hdr <die> <num>
 
 ``!hd <die> <num>``
 
-``<die>`` - Die size (ex. ``d10``)
-
+``<die>`` - Die size (ex. ``d10``)  
 ``<num>`` - Number of hit dice you are expending (ex. ``2``)
 
 *Example:* ``!hd d10 2``
