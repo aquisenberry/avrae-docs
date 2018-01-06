@@ -8,7 +8,7 @@ First, [create a character sheet](#creating-a-character).
 
 Now, scroll down and find the commands you want. You do not need to use every command here, but many automate tasks such as counter tracking and regaining hit points such as Second Wind. They also include a description and a page number to find each feature.
 
-When you find a command you want, copy the text in the Code box. Paste and send the text in a channel Avrae can read, or in Direct Messages to it. If there are two code blocks, use the **DiceCloud** box if your sheet is on DiceCloud. Otherwise, use the **Alternative** box.
+When you find a command you want, copy the text in the **Code** box. Paste and send the text in a channel Avrae can read, or in Direct Messages to it. If there are two code blocks, use the **DiceCloud** box if your sheet is on DiceCloud. Otherwise, use the **Alternative** box.
 
 To change the command name, replace the word following ``alias`` or ``snippet`` such as ``bsw`` in ``!alias bsw``. To use an alias, type the command name, such as ``!bsw``. To use a snippet, type ``!a weapon snippet``, replacing ``weapon`` with a weapon on your character sheet, and ``snippet`` with the name of your snippet.
 
