@@ -1,6 +1,6 @@
 # Fighter
 
-Avrae is a powerful D&D 5E Discord bot used to make rolls and streamline playing online. This list includes commands (aliases and snippets) for the Fighter class.
+Avrae is a powerful D&D 5E Discord bot used to make rolls and streamline playing online. This list includes commands (aliases and snippets) for the fighter class.
 
 ## Creating a Fighter
 
