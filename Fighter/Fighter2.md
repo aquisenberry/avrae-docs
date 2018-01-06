@@ -20,22 +20,22 @@ You can set up your fighter aliases quickly by clicking this [link](#creating-a-
 
 #### Multiclassing with Alternative Sheets
 
-If you are multiclassing with a non-DiceCloud sheet, run the following command, replacing ``<flvl>`` with your current fighter level.
+If you are multiclassing with a non-DiceCloud sheet, run the following command, replacing ``$flvl$`` with your current fighter level.
 
 ```GN
-!cvar FighterLevel <flvl>
+!cvar FighterLevel $flvl$
 ```
 
-If there are two boxes of code, use the DiceCloud box instead of the Alternative box. **IMPORTANT:** In addition, whenever you gain a level in fighter, run the command again, replacing ``<flvl>`` with your new fighter level. This will update all of your aliases with your new fighter level.
+If there are two boxes of code, use the DiceCloud box instead of the Alternative box. **IMPORTANT:** In addition, whenever you gain a level in fighter, run the command again, replacing ``$flvl$`` with your new fighter level. This will update all of your aliases with your new fighter level.
 
 #### (Optional) Color
 
-You can also set up a color by sending the following code to Avrae, replacing ``<hex>`` with a [color hex code](https://www.webpagefx.com/web-design/color-picker/). Do not include the hashtag (#). You do not need to run this for commands to function properly.
+You can also set up a color by sending the following code to Avrae, replacing ``$hex$`` with a [color hex code](https://www.webpagefx.com/web-design/color-picker/). Do not include the hashtag (#). You do not need to run this for commands to function properly.
 
 ```GN
 !multiline
-!csettings color <hex>
-!cvar color <hex>
+!csettings color $hex$
+!cvar color $hex$
 ```
 
 
@@ -76,13 +76,13 @@ Displays text and page number for Hit Dice. Subtracts from Hit Dice counter and 
 
 A DiceCloud feature called "Hit Dice (d10)" with ``FighterLevel`` number of uses. Do not include ``short rest`` or ``long rest`` in your feature, as you only regain half your Hit Dice on a long rest.
 
-Alternatively, run the following code, replacing ``<flvl>`` with your current fighter level. **IMPORTANT:** Whenever you gain a level in fighter, run this command again.
+Alternatively, run the following code, replacing ``$flvl$`` with your current fighter level. **IMPORTANT:** Whenever you gain a level in fighter, run this command again.
 
 ```GN
-!cc create "Hit Dice (d10)" -min 0 -max <flvl> -type default
+!cc create "Hit Dice (d10)" -min 0 -max $flvl$ -type default
 ```
 
-To regain hit dice, you can run the following alias. Usage is ``!hdr <die> <num>``, replacing ``<die>`` with a die size (such as ``d10``), and ``<num>`` with a number, such as ``3``. An example of this is ``!hdr d10 3``.
+To regain hit dice, you can run the following alias. Usage is ``!hdr $die$ $num$``, replacing ``$die$`` with a die size (such as ``d10``), and ``$num$`` with a number, such as ``3``. An example of this is ``!hdr d10 3``.
 
 ```GN
 !alias hdr embed 
@@ -96,10 +96,10 @@ To regain hit dice, you can run the following alias. Usage is ``!hdr <die> <num>
 
 #### Usage
 
-``!hd <die> <num>``
+``!hd $die$ $num$``
 
-``<die>`` - Die size (ex. ``d10``)  
-``<num>`` - Number of hit dice you are expending (ex. ``2``)
+``$die$`` - Die size (ex. ``d10``)  
+``$num$`` - Number of hit dice you are expending (ex. ``2``)
 
 *Example:* ``!hd d10 2``
 
@@ -182,10 +182,10 @@ Displays text and page number for Action Surge. Subtracts 1 from Action Surge co
 
 #### Prerequisites
 
-A DiceCloud feature called "Action Surge" with ``1+floor(FighterLevel/17)`` uses, with the words ``short rest`` in it. Alternatively, run the following code, replacing ``<uses>`` with the number of Action Surge uses you have.
+A DiceCloud feature called "Action Surge" with ``1+floor(FighterLevel/17)`` uses, with the words ``short rest`` in it. Alternatively, run the following code, replacing ``$uses$`` with the number of Action Surge uses you have.
 
 ```GN
-!cc create "Action Surge" -min 0 -max <uses> -reset short -type bubble
+!cc create "Action Surge" -min 0 -max $uses$ -reset short -type bubble
 ```
 
 To reset your Action Surge, type ``!g [shortrest|sr]`` or ``!g [longrest|lr]``.
@@ -209,10 +209,10 @@ Displays text and page number for Indomitable. Subtracts 1 from Indomitable coun
 
 #### Prerequisites
 
-A DiceCloud feature called "Indomitable" with ``1+floor(FighterLevel/13)+floor(FighterLevel/17)`` uses, with the words ``long rest`` in it. Alternatively, run the following code, replacing ``<uses>`` with the number of Indomitable uses you have.
+A DiceCloud feature called "Indomitable" with ``1+floor(FighterLevel/13)+floor(FighterLevel/17)`` uses, with the words ``long rest`` in it. Alternatively, run the following code, replacing ``$uses$`` with the number of Indomitable uses you have.
 
 ```GN
-!cc create "Indomitable" -min 0 -max <uses> -reset long -type bubble
+!cc create "Indomitable" -min 0 -max $uses$ -reset long -type bubble
 ```
 
 To reset your Indomitable, type ``!g [longrest|lr]``.
