@@ -164,7 +164,17 @@ If your sheet is on DiceCloud, use the DiceCloud box. Otherwise, use the Alterna
 ```GN
 !alias bsw embed 
 {{set("counter", "Second Wind")}} 
-{{mod_cc(counter, -1, True)}} {{set("lvl", level)}} {{set("heal", vroll("1d10+"+str(lvl)))}} {{set_hp(min(hp, heal.total + currentHp))}} -title "<name> uses {{counter}}!" -desc "On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again." -f "Healing Recieved|{{str(heal)}}" -f "Hit Points|{{get_hp()}} / {{hp}}" -f "{{counter}}|〇" -footer "The Fighter | PHB 72" -color <color>
+{{mod_cc(counter, -1, True)}} 
+{{set("lvl", level)}} 
+{{set("heal", vroll("1d10+"+str(lvl)))}} 
+{{set_hp(min(hp, heal.total + currentHp))}} 
+-title "<name> uses {{counter}}!" 
+-desc "On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again." 
+-f "Healing Recieved|{{str(heal)}}" 
+-f "Hit Points|{{get_hp()}} / {{hp}}" 
+-f "{{counter}}|〇" 
+-footer "The Fighter | PHB 72" 
+-color <color>
 ```
 
 ## Action Surge
