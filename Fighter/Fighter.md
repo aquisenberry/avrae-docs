@@ -139,6 +139,7 @@ Change the ``-max 1`` to ``-max 2`` at level 13, and to ``-max 3`` at level 17.
 ***Formatter Note:*** *Better?*
 
 To quickly set up your fighter with avrae, copy and paste the relevant below. You only need to enter one of the following code blocks. For example, for a 11th level fighter, you'd only enter the ``9th-12th Level Fighter`` section.
+
 As you level up in the class, you can either only add the relevant codes for that level, or can enter the code for the new level section from below.
 
 ### 1st Level Fighter
