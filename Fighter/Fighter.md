@@ -139,6 +139,8 @@ To quickly set up your fighter with avrae, copy and paste the relevant below. Yo
 
 As you level up in the class, you can either only add the relevant codes for that level, or can enter the code for the new level section from below.
 
+This section contains the custom counters (``cc``) relevant to each level of fighter. Included below as well is a comprehensive package containing all of the main class fighter aliases.
+
 ### 1st Level Fighter
 ```GN
 !multiline
@@ -153,9 +155,7 @@ As you level up in the class, you can either only add the relevant codes for tha
 !cvar hd d10
 !cc create "Hit Dice" -reset none -max <level> -min 0
 !cc create "Second Wind" -min 0 -max 1 -type bubble -reset short
-!alias 2nd embed {{set("counter", "Second Wind")}} {{mod_cc(counter, -1, True)}} {{set("heal", vroll("1d10+"+str(level)))}} {{set_hp(min(hp, heal.total + currentHp))}} -title "<name> uses {{counter}}!" -desc "On your turn, you can use a bonus action to regain 1d10 + {level} HP. Once you use this feature, you must finish a short or long rest before you can use it again. *(PHB 72)*" -f "Healing Recieved|{{str(heal)}}" -f "Hit Points|{{get_hp()}} / {{hp}}" -f "{{counter}}|〇" -color <color> -thumb <image>
 !cc create "Action Surge" -min 0 -max 1 -type bubble -reset short
-!alias asurge embed {{set("counter", "Action Surge")}} {{mod_cc(counter, -1, True)}} -title "<name> uses {{counter}}!" -desc "On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again. (PHB 72)" -f "{{counter}}|〇" -color <color> -thumb <image>
 ```
 
 ### 9th to 12th Level Fighter
@@ -164,11 +164,8 @@ As you level up in the class, you can either only add the relevant codes for tha
 !cvar hd d10
 !cc create "Hit Dice" -reset none -max <level> -min 0
 !cc create "Second Wind" -min 0 -max 1 -type bubble -reset short
-!alias 2nd embed {{set("counter", "Second Wind")}} {{mod_cc(counter, -1, True)}} {{set("heal", vroll("1d10+"+str(level)))}} {{set_hp(min(hp, heal.total + currentHp))}} -title "<name> uses {{counter}}!" -desc "On your turn, you can use a bonus action to regain 1d10 + {level} HP. Once you use this feature, you must finish a short or long rest before you can use it again. *(PHB 72)*" -f "Healing Recieved|{{str(heal)}}" -f "Hit Points|{{get_hp()}} / {{hp}}" -f "{{counter}}|〇" -color <color> -thumb <image>
 !cc create "Action Surge" -min 0 -max 1 -type bubble -reset short
-!alias asurge embed {{set("counter", "Action Surge")}} {{mod_cc(counter, -1, True)}} -title "<name> uses {{counter}}!" -desc "On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again. (PHB 72)" -f "{{counter}}|〇" -color <color> -thumb <image>
 !cc create "Indomitable" -min 0 -max 1 -type bubble -reset long
-!alias indomitable embed {{set("counter", "Indomitable")}} {{mod_cc(counter, -1, True)}} -title "<name> uses {{counter}}!" -desc "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can’t use this feature again until you finish a long rest. *(PHB 72)*" -f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}" -color <color> -thumb <image>
 ```
 
 ### 13th to 16th Level
@@ -177,11 +174,8 @@ As you level up in the class, you can either only add the relevant codes for tha
 !cvar hd d10
 !cc create "Hit Dice" -reset none -max <level> -min 0
 !cc create "Second Wind" -min 0 -max 1 -type bubble -reset short
-!alias 2nd embed {{set("counter", "Second Wind")}} {{mod_cc(counter, -1, True)}} {{set("heal", vroll("1d10+"+str(level)))}} {{set_hp(min(hp, heal.total + currentHp))}} -title "<name> uses {{counter}}!" -desc "On your turn, you can use a bonus action to regain 1d10 + {level} HP. Once you use this feature, you must finish a short or long rest before you can use it again. *(PHB 72)*" -f "Healing Recieved|{{str(heal)}}" -f "Hit Points|{{get_hp()}} / {{hp}}" -f "{{counter}}|〇" -color <color> -thumb <image>
 !cc create "Action Surge" -min 0 -max 1 -type bubble -reset short
-!alias asurge embed {{set("counter", "Action Surge")}} {{mod_cc(counter, -1, True)}} -title "<name> uses {{counter}}!" -desc "On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again. (PHB 72)" -f "{{counter}}|〇" -color <color> -thumb <image>
 !cc create "Indomitable" -min 0 -max 2 -type bubble -reset long
-!alias indomitable embed {{set("counter", "Indomitable")}} {{mod_cc(counter, -1, True)}} -title "<name> uses {{counter}}!" -desc "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can’t use this feature again until you finish a long rest. *(PHB 72)*" -f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}" -color <color> -thumb <image>
 ```
 
 ### 17th+ Level Fighter
@@ -190,9 +184,11 @@ As you level up in the class, you can either only add the relevant codes for tha
 !cvar hd d10
 !cc create "Hit Dice" -reset none -max <level> -min 0
 !cc create "Second Wind" -min 0 -max 1 -type bubble -reset short
-!alias 2nd embed {{set("counter", "Second Wind")}} {{mod_cc(counter, -1, True)}} {{set("heal", vroll("1d10+"+str(level)))}} {{set_hp(min(hp, heal.total + currentHp))}} -title "<name> uses {{counter}}!" -desc "On your turn, you can use a bonus action to regain 1d10 + {level} HP. Once you use this feature, you must finish a short or long rest before you can use it again. *(PHB 72)*" -f "Healing Recieved|{{str(heal)}}" -f "Hit Points|{{get_hp()}} / {{hp}}" -f "{{counter}}|〇" -color <color> -thumb <image>
 !cc create "Action Surge" -min 0 -max 2 -type bubble -reset short
-!alias asurge embed {{set("counter", "Action Surge")}} {{mod_cc(counter, -1, True)}} -title "<name> uses {{counter}}!" -desc "On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again. (PHB 72)" -f "{{counter}}|〇" -color <color> -thumb <image>
 !cc create "Indomitable" -min 0 -max 3 -type bubble -reset long
-!alias indomitable embed {{set("counter", "Indomitable")}} {{mod_cc(counter, -1, True)}} -title "<name> uses {{counter}}!" -desc "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can’t use this feature again until you finish a long rest. *(PHB 72)*" -f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}" -color <color> -thumb <image>
+```
+
+### Fighter Alias Package
+```GN
+To Do: Paste in all of the aliases.
 ```
