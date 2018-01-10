@@ -40,7 +40,7 @@ To change the command name, replace the word following ``alias`` or ``snippet`` 
 
 If you are multiclassing with a non-DiceCloud sheet, run the following command, replacing ``$flvl$`` with your current fighter level.
 
-```py
+```GN
 !cvar FighterLevel $flvl$
 ```
 
@@ -52,12 +52,11 @@ This will update all of your aliases with your new fighter level.
 
 You can also set up a color by sending the following code to Avrae, replacing ``$hex$`` with a [color hex code](https://www.webpagefx.com/web-design/color-picker/). Do not include the hashtag (#). You do not need to run this for commands to function properly.
 
-```py
+```GN
 !multiline
 !csettings color $hex$
 !cvar color $hex$
 ```
-
 
 ## The Fighter Table
 
@@ -100,7 +99,7 @@ Displays text and page number for Hit Dice. Subtracts from Hit Dice counter and 
 
 Alternatively, run the following code, replacing ``$flvl$`` with your current fighter level. **IMPORTANT: *Whenever you gain a level in fighter, run this command again.***
 
-```py
+```GN
 !cc create "Hit Dice (d10)" -min 0 -max $flvl$ -type default
 ```
 
@@ -113,7 +112,7 @@ To regain hit dice, you can run the following alias.
 
 *Example:* ``!hdr d10 5``
 
-```py
+```GN
 !alias hdr embed 
 {{mod_cc("Hit Dice (%1%)", %2%)}} 
 -title "<name> regains spent Hit Dice!" 
@@ -135,7 +134,7 @@ To regain hit dice, you can run the following alias.
 
 #### Code
 
-```py
+```GN
 !alias hd embed 
 {{mod_cc("Hit Dice (%1%)", -%2%, True)}} 
 {{set("heal", vroll("%2%%1%+"+str(constitutionMod*%2%)))}} 
@@ -163,7 +162,7 @@ Displays text and page number for Second Wind. Rolls 1d10 + your fighter level a
 
 Alternatively, run the following code.
 
-```py
+```GN
 !cc create "Second Wind" -min 0 -max 1 -reset short -type bubble
 ```
 
@@ -175,7 +174,7 @@ If your sheet is on DiceCloud, use the **DiceCloud** box. Otherwise, use the **A
 
 ###### DiceCloud
 
-```py
+```GN
 !alias bsw embed 
 {{set("counter", "Second Wind")}} 
 {{mod_cc(counter, -1, True)}} 
@@ -193,7 +192,7 @@ If your sheet is on DiceCloud, use the **DiceCloud** box. Otherwise, use the **A
 
 ###### Alternative
 
-```py
+```GN
 !alias bsw embed 
 {{set("counter", "Second Wind")}} 
 {{mod_cc(counter, -1, True)}} 
@@ -229,7 +228,7 @@ To reset your Action Surge, type ``!g [shortrest|sr]`` or ``!g [longrest|lr]``.
 
 #### Code
 
-```py
+```GN
 !alias bas embed 
 {{set("counter", "Action Surge")}} 
 {{mod_cc(counter, -1, True)}} 
@@ -239,7 +238,6 @@ To reset your Action Surge, type ``!g [shortrest|sr]`` or ``!g [longrest|lr]``.
 -footer "Fighter | PHB 72" 
 -color <color>
 ```
-
 
 ## Indomitable
 
@@ -253,7 +251,7 @@ Displays text and page number for Indomitable. Subtracts 1 from Indomitable coun
 
 Alternatively, run the following code, replacing ``$uses$`` with the number of Indomitable uses you have.
 
-```py
+```GN
 !cc create "Indomitable" -min 0 -max $uses$ -reset long -type bubble
 ```
 
@@ -261,7 +259,7 @@ To reset your Indomitable, type ``!g [longrest|lr]``.
 
 #### Code
 
-```py
+```GN
 !alias bi embed 
 {{set("counter", "Indomitable")}} 
 {{mod_cc(counter, -1, True)}} 
