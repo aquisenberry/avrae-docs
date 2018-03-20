@@ -12,7 +12,7 @@ Run the command in the **Code** section. It will automatically setup cvars.
 
 ### Personalization Options
 
-**``!alias $alias_name$ embed...``** - Changes the name to run the command. Replace ``secondWind`` in the command in the **Code** section.
+**``!alias $alias_name$ embed...``** - Changes the name to run the command. Replace ``remarkable`` in the command in the **Code** section.
 
 **``!csettings color $hex$``** - Colors all embeds this color.
 
