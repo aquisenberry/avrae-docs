@@ -22,10 +22,10 @@ Run the code below. It will automatically setup counters and cvars.
 {{set("pgSubject", "Fighter")}}
 {{set("pgNum", "PHB 72")}}
 {{set("counter", "Second Wind")}}
+{{set("lvl", FighterLevel if exists("FighterLevel") else level)}} 
 {{create_cc_nx(counter, 0, 1, "short", "bubble")}}
 {{set("valid", 1 if get_cc(counter) > 0 else 0)}}
 {{mod_cc(counter, -1) if valid else ""}} 
-{{set("lvl", FighterLevel if exists("FighterLevel") else level)}} 
 {{set("heal", vroll("1d10+"+str(lvl)))}} 
 {{mod_hp(heal.total, False) if valid else ""}} 
 -title "<name> {{"uses" if valid else "attempts to use"}} {{counter}}!" 
