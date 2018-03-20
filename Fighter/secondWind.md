@@ -28,12 +28,12 @@ Run the code below. It will automatically setup counters and cvars.
 {{mod_cc(counter, -1) if valid else ""}} 
 {{set("heal", vroll("1d10+"+str(lvl)))}} 
 {{mod_hp(heal.total, False) if valid else ""}} 
--title "<name> {{"uses" if valid else "attempts to use"}} {{counter}}!" 
+-title "<name> {{"uses" if valid else "attempted to use"}} {{counter}}!" 
 -desc "{{"On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again." if valid else "Once you use this feature, you must finish a short or long rest before you can use it again. (``!g sr``)"}}" 
 {{"-f \"Healing Recieved | " + str(heal) + "\"" if valid else ""}}
 {{"-f \"Hit Points | " + str(get_hp()) + " / " + str(hp) + "\"" if valid else ""}}
 -f "{{counter}} | 〇" 
 {{"-footer \"" + pgSubject + " | " + pgNum + "\"" if str(showpage) == "true" else ""}}
--color <color>
 {{"-thumb <image>" if str(embedimage) == "true" else ""}}
+-color <color>
 ```
