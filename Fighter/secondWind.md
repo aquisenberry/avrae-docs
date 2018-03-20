@@ -18,7 +18,9 @@ Run the code below. It will automatically setup counters and cvars.
 ```GN
 !alias bsw embed 
 {{set_cvar_nx("embedimage", "true")}}
+{{set_cvar("embedimage", "false") if str(embedimage) != "true" else ""}}
 {{set_cvar_nx("showpage", "true")}}
+{{set_cvar("showpage", "false") if str(showpage) != "true" else ""}}
 {{set("pgSubject", "Fighter")}}
 {{set("pgNum", "PHB 72")}}
 {{set("counter", "Second Wind")}}
