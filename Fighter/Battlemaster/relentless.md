@@ -2,7 +2,7 @@
 *By Toothless#7854.*
 
 <p align="center">
-  <img src="https://i.imgur.com/SBv4D6a.png"/>
+  <img src="https://i.imgur.com/0jsOfYs.png"/>
 </p>
 
 Rolls initiative. Adds 1 to "Superiority Dice" counter if "Superiority Dice" counter equals 0.
