@@ -8,7 +8,13 @@
 Subtracts 1 from "Action Surge" counter. Prompts user to take a short or long rest if "Action Surge" counter is not greater than 0. 
 
 ### Setup
-Run the code below. It will automatically setup counters and cvars.
+Run the command in the **Code** section. It will automatically setup counters and cvars.
+
+### Personalization Options
+
+**``!alias $alias_name$ embed...``** - Changes the name to run the command. Replace ``actionSurge`` in the command in the **Code** section.
+
+**``!csettings color $hex$``** - Colors all embeds this color.
 
 **``!cvar embedimage true / false``** - Enables / disables whether a character's image is automatically embedded.
 
@@ -16,7 +22,7 @@ Run the code below. It will automatically setup counters and cvars.
 
 ### Code
 ```GN
-!alias bas embed 
+!alias actionSurge embed 
 {{set_cvar_nx("embedimage", "true")}}
 {{set_cvar("embedimage", "false") if str(embedimage) != "true" else ""}}
 {{set_cvar_nx("showpage", "true")}}
