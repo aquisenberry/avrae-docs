@@ -1,5 +1,5 @@
 # Alias Name
-*By zhu.exe#4211, modified by Toothless#7854*
+*By Toothless#7854*
 
 <p align="center">
   <img src="https://i.imgur.com/80PZHL9.png"/>
