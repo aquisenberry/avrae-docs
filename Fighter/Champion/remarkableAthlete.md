@@ -14,7 +14,7 @@ Run the command in the **Code** section. It will automatically setup cvars.
 
 **``!alias $alias_name$ embed...``** - Changes the name to run the command. Replace ``remarkable`` in the command in the **Code** section.
 
-**``!csettings color $hex$``** - Colors all embeds this color.
+**``!csettings color $hex$``** - Colors all embeds this color. Replace ``$hex$`` with a hex code. Do not include the hashtag (#).
 
 **``!cvar embedimage true / false``** - Enables / disables whether a character's image is automatically embedded.
 
