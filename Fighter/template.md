@@ -2,7 +2,7 @@
 *By zhu.exe#4211, modified by Toothless#7854*
 
 <p align="center">
-  <img src="picture"/>
+  <img src="https://i.imgur.com/80PZHL9.png"/>
 </p>
 
 A description of what the alias/snippet does.
@@ -23,5 +23,16 @@ Run the command in the **Code** section. It will automatically setup counters an
 ### Code
 ```GN
 !alias name embed
-{{"Avrae code to create the alias goes here."}}
+{{set_cvar_nx("embedimage", "true")}}
+{{set_cvar("embedimage", "false") if str(embedimage) != "true" else ""}}
+{{set_cvar_nx("showpage", "true")}}
+{{set_cvar("showpage", "false") if str(showpage) != "true" else ""}}
+{{set("pgSubject", "Subject")}}
+{{set("pgNum", "PHB #")}}
+{{set("counter", "Name")}}
+-title "<name> uses {{counter}}!"
+-desc "This is a test alias to demonstrate the format of documentation."
+{{"-footer \"" + pgSubject + " | " + pgNum + "\"" if str(showpage) == "true" else ""}}
+{{"-thumb <image>" if str(embedimage) == "true" else ""}}
+-color <color>
 ```
