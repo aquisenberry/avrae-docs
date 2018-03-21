@@ -5,7 +5,7 @@
   <img src="https://i.imgur.com/nscoFzW.png"/>
 </p>
 
-Subtracts 1 from "Second Wind" counter. Regains hit points equal to 1d10 + your fighter level. Displays current and max hit points after regaining. Displays "Second Wind" counter. Prompts user to take a short or long rest if "Second Wind" counter is not greater than 0. 
+Subtracts 1 from "Second Wind" counter. Regains hit points equal to 1d10 + your fighter level. Displays current and max hit points after regaining. Displays "Second Wind" counter. Prompts user to take a short or long rest if "Second Wind" counter is not greater than 0.
 
 ### Setup
 Run the command in the **Code** section. It will automatically setup counters and cvars.
@@ -14,7 +14,7 @@ Run the command in the **Code** section. It will automatically setup counters an
 
 **``!alias $alias_name$ embed...``** - Changes the name to run the command. Replace ``secondWind`` in the command in the **Code** section.
 
-**``!csettings color $hex$``** - Colors all embeds this color.
+**``!csettings color $hex$``** - Colors all embeds this color. Replace ``$hex$`` with a hex code. Do not include the hashtag (#).
 
 **``!cvar embedimage true / false``** - Enables / disables whether a character's image is automatically embedded.
 
