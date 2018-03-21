@@ -20,6 +20,16 @@ Run the command in the **Code** section. It will automatically setup counters an
 
 **``!cvar showpage true / false``** - Enables / disables whether subjects and page numbers are displayed.
 
+### Multiclassing
+
+If you are multiclassing and you are not using a DiceCloud sheet, run the following command, replacing ``$lvl$`` with your current fighter level.
+
+```GN
+!cvar FighterLevel $lvl$
+```
+
+**You must run this command every time you gain a fighter level.** If you do not do this, the alias will use your total level instead of your Fighter level. This may cause problems in your aliases.
+
 ### Code
 ```GN
 !alias commander embed
