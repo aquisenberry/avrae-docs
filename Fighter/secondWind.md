@@ -22,7 +22,7 @@ Run the command in the **Code** section. It will automatically setup counters an
 
 ### Code
 ```GN
-!alias secondWind embed 
+!alias secondWind embed
 {{set_cvar_nx("embedimage", "true")}}
 {{set_cvar("embedimage", "false") if str(embedimage) != "true" else ""}}
 {{set_cvar_nx("showpage", "true")}}
@@ -30,17 +30,17 @@ Run the command in the **Code** section. It will automatically setup counters an
 {{set("pgSubject", "Fighter")}}
 {{set("pgNum", "PHB 72")}}
 {{set("counter", "Second Wind")}}
-{{set("lvl", FighterLevel if exists("FighterLevel") else level)}} 
+{{set("lvl", FighterLevel if exists("FighterLevel") else level)}}
 {{create_cc_nx(counter, 0, 1, "short", "bubble")}}
 {{set("valid", 1 if get_cc(counter) > 0 else 0)}}
-{{mod_cc(counter, -1) if valid else ""}} 
-{{set("heal", vroll("1d10+"+str(lvl)))}} 
-{{mod_hp(heal.total, False) if valid else ""}} 
--title "<name> {{"uses" if valid else "attempted to use"}} {{counter}}!" 
--desc "{{"On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again." if valid else "Once you use this feature, you must finish a short or long rest before you can use it again. (``!g sr``)"}}" 
+{{mod_cc(counter, -1) if valid else ""}}
+{{set("heal", vroll("1d10+"+str(lvl)))}}
+{{mod_hp(heal.total, False) if valid else ""}}
+-title "<name> {{"uses" if valid else "attempted to use"}} {{counter}}!"
+-desc "{{"On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again." if valid else "Once you use this feature, you must finish a short or long rest before you can use it again. (``!g sr``)"}}"
 {{"-f \"Healing Recieved | " + str(heal) + "\"" if valid else ""}}
 {{"-f \"Hit Points | " + str(get_hp()) + " / " + str(hp) + "\"" if valid else ""}}
--f "{{counter}} | 〇" 
+-f "{{counter}} | 〇"
 {{"-footer \"" + pgSubject + " | " + pgNum + "\"" if str(showpage) == "true" else ""}}
 {{"-thumb <image>" if str(embedimage) == "true" else ""}}
 -color <color>
