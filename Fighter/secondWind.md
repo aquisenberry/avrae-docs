@@ -32,7 +32,7 @@ If you are multiclassing and you are not using a DiceCloud sheet, run the follow
 
 ### Usage
 
-``!actionSurge``
+``!secondWind``
 
 ### Code
 ```GN
