@@ -22,7 +22,7 @@ Run the command in the **Code** section. It will automatically setup counters an
 
 ### Usage
 
-``!distracting [crit]``
+``!distracting [args]``
 
 ``crit`` - Automatically crit
 
