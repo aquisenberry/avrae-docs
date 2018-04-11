@@ -30,6 +30,10 @@ If you are multiclassing and you are not using a DiceCloud sheet, run the follow
 
 **You must run this command every time you gain a fighter level.** If you do not do this, the alias will use your total level instead of your Fighter level. This may cause problems in your aliases.
 
+### Usage
+
+``!actionSurge``
+
 ### Code
 ```GN
 !alias secondWind embed
