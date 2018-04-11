@@ -5,7 +5,7 @@
   <img src="https://i.imgur.com/cv35B5M.png"/>
 </p>
 
-Subtracts 1 from "Action Surge" counter. Prompts user to take a short or long rest if "Action Surge" counter is not greater than 0. 
+Subtracts 1 from "Action Surge" counter. 
 
 ### Setup
 Run the command in the **Code** section. It will automatically setup counters and cvars.
