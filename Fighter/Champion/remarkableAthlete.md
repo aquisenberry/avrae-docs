@@ -20,6 +20,10 @@ Run the command in the **Code** section. It will automatically setup cvars.
 
 **``!cvar showpage true / false``** - Enables / disables whether subjects and page numbers are displayed.
 
+### Usage
+
+``!remarkable``
+
 ### Code
 ```GN
 !alias remarkable embed
