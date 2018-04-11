@@ -5,7 +5,7 @@
   <img src="https://i.imgur.com/Azv7Ii0.png"/>
 </p>
 
-Subtracts 1 from "Indomitable" counter. Prompts user to take a short or long rest if "Indomitable" counter is not greater than 0. 
+Subtracts 1 from "Indomitable" counter.
 
 ### Usage
 
