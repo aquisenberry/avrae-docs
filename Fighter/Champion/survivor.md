@@ -20,6 +20,10 @@ Run the command in the **Code** section. It will automatically setup counters an
 
 **``!cvar showpage true / false``** - Enables / disables whether subjects and page numbers are displayed.
 
+### Usage
+
+``!survivor``
+
 ### Code
 ```GN
 !alias survivor embed 
