@@ -7,34 +7,14 @@
 
 Subtracts 1 from "Superiority Dice" counter. Rolls superiority die for damage. Displays save DC versus effect.
 
-### Setup
-Run the command in the **Code** section. It will automatically setup counters and cvars.
-
-### Personalization Options
-
-**``!alias $alias_name$ embed...``** - Changes the name to run the command. Replace ``disarming`` in the command in the **Code** section.
-
-**``!csettings color $hex$``** - Colors all embeds this color. Replace ``$hex$`` with a hex code. Do not include the hashtag (#).
-
-**``!cvar embedimage true / false``** - Enables / disables whether a character's image is automatically embedded.
-
-**``!cvar showpage true / false``** - Enables / disables whether subjects and page numbers are displayed.
-
-### Multiclassing
-
-If you are multiclassing and you are not using a DiceCloud sheet, run the following command, replacing ``$lvl$`` with your current fighter level.
-
-```GN
-!cvar FighterLevel $lvl$
-```
-
-**You must run this command every time you gain a fighter level.** If you do not do this, the alias will use your total level instead of your Fighter level. This may cause problems in your aliases.
-
 ### Usage
 
 ``!disarming [args]``
 
 ``crit`` - Automatically crit
+
+### Setup
+Run the command in the **Code** section. It will automatically setup counters and cvars.
 
 ### Code
 
@@ -65,3 +45,23 @@ If you are multiclassing and you are not using a DiceCloud sheet, run the follow
 {{"-thumb <image>" if str(embedimage) == "true" else ""}}
 -color <color>
 ```
+
+### Personalization Options
+
+**``!alias $alias_name$ embed...``** - Changes the name to run the command. Replace ``disarming`` in the command in the **Code** section.
+
+**``!csettings color $hex$``** - Colors all embeds this color. Replace ``$hex$`` with a hex code. Do not include the hashtag (#).
+
+**``!cvar embedimage true / false``** - Enables / disables whether a character's image is automatically embedded.
+
+**``!cvar showpage true / false``** - Enables / disables whether subjects and page numbers are displayed.
+
+### Multiclassing
+
+If you are multiclassing and you are not using a DiceCloud sheet, run the following command, replacing ``$lvl$`` with your current fighter level.
+
+```GN
+!cvar FighterLevel $lvl$
+```
+
+**You must run this command every time you gain a fighter level.** If you do not do this, the alias will use your total level instead of your Fighter level. This may cause problems in your aliases.
