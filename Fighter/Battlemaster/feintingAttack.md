@@ -5,7 +5,7 @@
   <img src="https://i.imgur.com/ABloj1w.png"/>
 </p>
 
-Subtracts 1 from "Superiority Dice" counter. Adds advantage and Superiority Die to attack.
+Subtracts 1 from "Superiority Dice" counter. Adds advantage and Superiority Die to attack and damage roll.
 
 ### Usage
 
