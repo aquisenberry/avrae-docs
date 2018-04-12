@@ -2,7 +2,7 @@
 *By Toothless#7854*
 
 <p align="center">
-  <img src="https://i.imgur.com/9sNJFIp.png"/>
+  <img src="https://i.imgur.com/aA0jIzc.png"/>
 </p>
 
 Subtracts 1 from "Superiority Dice" counter. Rolls superiority die for damage, and a second for possible critical hit.
