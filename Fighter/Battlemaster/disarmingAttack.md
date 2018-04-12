@@ -11,7 +11,7 @@ Subtracts 1 from "Superiority Dice" counter. Rolls superiority die for damage. D
 
 ``!disarming [args]``
 
-**Valid Arguments:**
+Valid Arguments:
 
 > ``crit`` - Automatically crit
 
