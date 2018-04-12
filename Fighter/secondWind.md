@@ -5,7 +5,7 @@
   <img src="https://i.imgur.com/nscoFzW.png"/>
 </p>
 
-Subtracts 1 from "Second Wind" counter. Regains hit points equal to 1d10 + your fighter level. Displays current and max hit points after regaining. Displays "Second Wind" counter.
+Subtracts 1 from "Second Wind" counter. Regains hit points equal to 1d10 + your fighter level. Displays current and max hit points after regaining. 
 
 ### Usage
 
