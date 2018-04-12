@@ -7,22 +7,12 @@
 
 Displays Strength score, Strength modifier, and running long jump distance.
 
-### Setup
-Run the command in the **Code** section. It will automatically setup cvars.
-
-### Personalization Options
-
-**``!alias $alias_name$ embed...``** - Changes the name to run the command. Replace ``remarkable`` in the command in the **Code** section.
-
-**``!csettings color $hex$``** - Colors all embeds this color. Replace ``$hex$`` with a hex code. Do not include the hashtag (#).
-
-**``!cvar embedimage true / false``** - Enables / disables whether a character's image is automatically embedded.
-
-**``!cvar showpage true / false``** - Enables / disables whether subjects and page numbers are displayed.
-
 ### Usage
 
 ``!remarkable``
+
+### Setup
+Run the command in the **Code** section. It will automatically setup cvars.
 
 ### Code
 ```GN
@@ -43,3 +33,13 @@ Run the command in the **Code** section. It will automatically setup cvars.
 {{"-thumb <image>" if str(embedimage) == "true" else ""}}
 -color <color>
 ```
+
+### Personalization Options
+
+**``!alias $alias_name$ embed...``** - Changes the name to run the command. Replace ``remarkable`` in the command in the **Code** section.
+
+**``!csettings color $hex$``** - Colors all embeds this color. Replace ``$hex$`` with a hex code. Do not include the hashtag (#).
+
+**``!cvar embedimage true / false``** - Enables / disables whether a character's image is automatically embedded.
+
+**``!cvar showpage true / false``** - Enables / disables whether subjects and page numbers are displayed.
