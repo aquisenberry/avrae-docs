@@ -1,3 +1,5 @@
+**This document is OUTDATED. For individual aliases, please see the Fighter folder.**
+
 # Fighter
 
 Avrae is a powerful D&D 5E Discord bot used to make rolls and streamline playing online. This list includes commands (aliases and snippets) for the fighter class.
