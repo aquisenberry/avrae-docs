@@ -1,3 +1,5 @@
+**This document is OUTDATED. For individual aliases, please see the Fighter folder.**
+
 # Fighter
 *By silverbass#2407*
 
