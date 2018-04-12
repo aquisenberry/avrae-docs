@@ -2,10 +2,10 @@
 *By Toothless#7854*
 
 <p align="center">
-  <img src="https://i.imgur.com/pKxnwmn.png"/>
+  <img src="https://i.imgur.com/FkYhM7b.png"/>
 </p>
 
-Subtracts 1 from "Superiority Dice" counter. Rolls superiority die for damage. Displays save DC versus effect.
+Subtracts 1 from "Superiority Dice" counter. Rolls superiority die for damage.
 
 ### Usage
 
@@ -41,7 +41,6 @@ Run the command in the **Code** section. It will automatically setup counters an
 -title "<name> {{"uses" if valid else "attempted to use"}} Distracting Strike!"
 -desc "{{"When you hit a creature with a weapon attack, you can expend one superiority die to distract the creature, giving your allies an opening. You add the superiority die to the attack’s damage roll.\n\nThe next attack roll against the target by an attacker other than you has advantage if the attack is made before the start of your next turn." if valid else "A superiority die is expended when you use it. You regain all of your expended superiority dice when you finish a short or long rest. (``!g sr``)"}}"
 {{"-f \"Damage | " + str(dmg) + (" **(CRIT!)**" if crit else "") + "\"" if valid else ""}}
-{{"-f \"Save | DC " + str(dc) + " Wisdom\"" if valid else ""}}
 -f "{{counter}} | {{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}"
 {{"-footer \"" + pgSubject + " | " + pgNum + "\"" if str(showpage) == "true" else ""}}
 {{"-thumb <image>" if str(embedimage) == "true" else ""}}
