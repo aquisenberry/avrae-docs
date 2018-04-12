@@ -7,22 +7,12 @@
 
 Rolls initiative. Adds 1 to "Superiority Dice" counter if "Superiority Dice" counter equals 0.
 
-### Setup
-Run the command in the **Code** section. It will automatically setup counters and cvars.
-
-### Personalization Options
-
-**``!alias $alias_name$ embed...``** - Changes the name to run the command. Replace ``relentless`` in the command in the **Code** section.
-
-**``!csettings color $hex$``** - Colors all embeds this color. Replace ``$hex$`` with a hex code. Do not include the hashtag (#).
-
-**``!cvar embedimage true / false``** - Enables / disables whether a character's image is automatically embedded.
-
-**``!cvar showpage true / false``** - Enables / disables whether subjects and page numbers are displayed.
-
 ### Usage
 
 ``!relentless``
+
+### Setup
+Run the command in the **Code** section. It will automatically setup counters and cvars.
 
 ### Code
 ```GN
@@ -38,3 +28,13 @@ Run the command in the **Code** section. It will automatically setup counters an
 {{mod_cc(counter, 1) if valid else ""}} 
 -phrase "**Relentless.** {{"When you roll initiative and have no superiority dice remaining, you regain one superiority die." if valid else "You must have no superiority dice remaining to regain one superiority die."}} [{{get_cc(counter)}} / {{get_cc_max(counter)}}]{{" (" + pgNum + ")" if str(showpage) == "true" else ""}}"  
 ```
+
+### Personalization Options
+
+**``!alias $alias_name$ embed...``** - Changes the name to run the command. Replace ``relentless`` in the command in the **Code** section.
+
+**``!csettings color $hex$``** - Colors all embeds this color. Replace ``$hex$`` with a hex code. Do not include the hashtag (#).
+
+**``!cvar embedimage true / false``** - Enables / disables whether a character's image is automatically embedded.
+
+**``!cvar showpage true / false``** - Enables / disables whether subjects and page numbers are displayed.
