@@ -5,34 +5,14 @@
   <img src="https://i.imgur.com/nscoFzW.png"/>
 </p>
 
-Subtracts 1 from "Second Wind" counter. Regains hit points equal to 1d10 + your fighter level. Displays current and max hit points after regaining. Displays "Second Wind" counter. Prompts user to take a short or long rest if "Second Wind" counter is not greater than 0.
-
-### Setup
-Run the command in the **Code** section. It will automatically setup counters and cvars.
-
-### Personalization Options
-
-**``!alias $alias_name$ embed...``** - Changes the name to run the command. Replace ``secondWind`` in the command in the **Code** section.
-
-**``!csettings color $hex$``** - Colors all embeds this color. Replace ``$hex$`` with a hex code. Do not include the hashtag (#).
-
-**``!cvar embedimage true / false``** - Enables / disables whether a character's image is automatically embedded.
-
-**``!cvar showpage true / false``** - Enables / disables whether subjects and page numbers are displayed.
-
-### Multiclassing
-
-If you are multiclassing and you are not using a DiceCloud sheet, run the following command, replacing ``$lvl$`` with your current fighter level.
-
-```GN
-!cvar FighterLevel $lvl$
-```
-
-**You must run this command every time you gain a fighter level.** If you do not do this, the alias will use your total level instead of your Fighter level. This may cause problems in your aliases.
+Subtracts 1 from "Second Wind" counter. Regains hit points equal to 1d10 + your fighter level. Displays current and max hit points after regaining. Displays "Second Wind" counter.
 
 ### Usage
 
 ``!secondWind``
+
+### Setup
+Run the command in the **Code** section. It will automatically setup counters and cvars.
 
 ### Code
 ```GN
@@ -59,3 +39,23 @@ If you are multiclassing and you are not using a DiceCloud sheet, run the follow
 {{"-thumb <image>" if str(embedimage) == "true" else ""}}
 -color <color>
 ```
+
+### Personalization Options
+
+**``!alias $alias_name$ embed...``** - Changes the name to run the command. Replace ``secondWind`` in the command in the **Code** section.
+
+**``!csettings color $hex$``** - Colors all embeds this color. Replace ``$hex$`` with a hex code. Do not include the hashtag (#).
+
+**``!cvar embedimage true / false``** - Enables / disables whether a character's image is automatically embedded.
+
+**``!cvar showpage true / false``** - Enables / disables whether subjects and page numbers are displayed.
+
+### Multiclassing
+
+If you are multiclassing and you are not using a DiceCloud sheet, run the following command, replacing ``$lvl$`` with your current fighter level.
+
+```GN
+!cvar FighterLevel $lvl$
+```
+
+**You must run this command every time you gain a fighter level.** If you do not do this, the alias will use your total level instead of your Fighter level. This may cause problems in your aliases.
