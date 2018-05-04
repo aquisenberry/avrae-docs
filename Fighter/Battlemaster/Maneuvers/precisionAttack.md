@@ -31,7 +31,6 @@ Run the command in the **Code** section. It will automatically setup counters an
 {{create_cc_nx(counter, 0, 4 if lvl < 7 else 5 if lvl < 15 else 6, "short", "bubble")}}
 {{set("valid", 1 if get_cc(counter) > 0 else 0)}}
 {{mod_cc(counter, -1) if valid else ""}}
-{{set("dc", 8 + max(dexterityMod, strengthMod) + proficiencyBonus)}}
 {{set("sd", "8" if lvl < 10 else "10" if lvl < 18 else "12")}}
 {{set("atk", "%1%")}}
 {{set("validAtk", atk.isdigit())}}
