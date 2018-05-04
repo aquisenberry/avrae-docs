@@ -9,14 +9,14 @@ Subtracts 1 from "Second Wind" counter. Regains hit points equal to 1d10 + your 
 
 ### Usage
 
-``!secondWind``
+``!second``
 
 ### Setup
 Run the command in the **Code** section. It will automatically setup counters and cvars.
 
 ### Code
 ```GN
-!alias secondWind embed
+!alias second embed
 {{set_cvar_nx("embedimage", "true")}}
 {{set_cvar("embedimage", "false") if str(embedimage) != "true" else ""}}
 {{set_cvar_nx("showpage", "true")}}
@@ -42,7 +42,7 @@ Run the command in the **Code** section. It will automatically setup counters an
 
 ### Personalization Options
 
-**``!alias $alias_name$ embed...``** - Changes the name to run the command. Replace ``secondWind`` in the command in the **Code** section.
+**``!alias $alias_name$ embed...``** - Changes the name to run the command. Replace ``second`` in the command in the **Code** section.
 
 **``!csettings color $hex$``** - Colors all embeds this color. Replace ``$hex$`` with a hex code. Do not include the hashtag (#).
 
