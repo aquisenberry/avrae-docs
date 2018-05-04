@@ -9,7 +9,7 @@ Subtracts 1 from "Superiority Dice" counter. Rolls superiority die for attack bo
 
 ### Usage
 
-``!precision [attackRoll]``
+``!precision [attack_roll]``
 
 Adds superiority die to attack roll if given.
 
