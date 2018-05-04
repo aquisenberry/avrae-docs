@@ -26,9 +26,9 @@ Run the command in the **Code** section. It will automatically setup counters an
 {{set("valid", 1 if get_cc(counter) > 0 else 0)}}
 {{mod_cc(counter, -1) if valid else ""}}
 {{set("sd", "8" if lvl < 10 else "10" if lvl < 18 else "12")}}
-adv
--d1 "1d{{sd}} [feinting]"
--phrase "**Feinting Attack.** You have advantage on your next attack roll against that creature this turn. {{"(" + pgNum + ")" if str(showpage) == "true" else ""}} [{{get_cc(counter)}} / {{get_cc_max(counter)}}]"
+{{"adv" if valid else ""}}
+{{"-d1 \"1d" + sd + " [feinting]\"" if valid else ""}}
+-phrase "**Feinting Attack.** {{"You have advantage on your next attack roll against that creature this turn." if valid else "A superiority die is expended when you use it. You regain all of your expended superiority dice when you finish a short or long rest. (``!g sr``)"}} {{"(" + pgNum + ")" if str(showpage) == "true" else ""}} [{{get_cc(counter)}} / {{get_cc_max(counter)}}]"
 ```
 
 ### Personalization Options
