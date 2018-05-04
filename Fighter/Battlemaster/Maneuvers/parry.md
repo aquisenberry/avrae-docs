@@ -35,7 +35,7 @@ Run the command in the **Code** section. It will automatically setup counters an
 {{set("sd", "8" if lvl < 10 else "10" if lvl < 18 else "12")}}
 {{set("dmg", "%1%")}}
 {{set("validDmg", dmg.isdigit())}}
-{{set("roll", vroll(((dmg + " - ") if validDmg else "") + "1d" + str(sd)))}}
+{{set("roll", vroll((dmg + " - " if validDmg else "") + "1d" + str(sd)))}}
 -title "<name> {{"uses" if valid else "attempted to use"}} Parry!"
 -desc "{{"When another creature damages you with a melee attack, you can use your reaction and expend one superiority die to reduce the damage by the number you roll on your superiority die + your Dexterity modifier." if valid else "A superiority die is expended when you use it. You regain all of your expended superiority dice when you finish a short or long rest. (``!g sr``)"}}"
 {{"-f \"Damage" + ("" if validDmg else " Reduction") + "  | " + str(roll) + "\"" if valid else ""}}
