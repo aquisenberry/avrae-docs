@@ -40,7 +40,7 @@ Run the command in the **Code** section. It will automatically setup counters an
 {{set("dmg", vroll(str(dice) + "d" + str(sd)))}}
 -title "<name> {{"uses" if valid else "attempted to use"}} Menacing Attack!"
 -desc "{{"When you hit a creature with a weapon attack, you can expend one superiority die to attempt to frighten the target.\n\nYou add the superiority die to the attack’s damage roll, and the target must make a Wisdom saving throw. On a failed save, it is frightened of you until the end of your next turn." if valid else "A superiority die is expended when you use it. You regain all of your expended superiority dice when you finish a short or long rest. (``!g sr``)"}}"
-{{"-f \"Damage | " + str(dmg) + (" **(CRIT!)**" if crit else "") + "\"" if valid else ""}}
+{{"-f \"Damage " + (" **(CRIT!)**" if crit else "") + " | " + str(dmg) + "\"" if valid else ""}}
 -f "{{counter}} | {{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}"
 {{"-footer \"" + pgSubject + " | " + pgNum + "\"" if str(showpage) == "true" else ""}}
 {{"-thumb <image>" if str(embedimage) == "true" else ""}}
