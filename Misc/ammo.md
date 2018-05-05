@@ -18,7 +18,13 @@
 ``!collect``
 
 ### Setup
-Run the snippet or the alias in the **Code** section. It will automatically setup counters.
+Run the snippet or the alias in the **Code** section. It will automatically setup counters. 
+
+**WARNING: Do NOT use -rr, as the snippet will only subtract ONE arrow, not multiple. If you do use -rr, you can manually adjust your counters to fix it.**
+
+``!cc Ammo -[arrows_used]``
+
+``!cc "Ammo Used" +[arrows_used]``
 
 ### Code
 ```GN
