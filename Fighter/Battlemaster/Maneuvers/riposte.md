@@ -27,7 +27,7 @@ Run the command in the **Code** section. It will automatically setup counters an
 {{mod_cc(counter, -1) if valid else ""}}
 {{set("sd", "8" if lvl < 10 else "10" if lvl < 18 else "12")}}
 {{"-d1 \"1d" + sd + " [riposte]\"" if valid else ""}}
--phrase "**Riposte.** {{"When a creature misses you with a melee attack, you can use your reaction and expend one superiority die to make a melee weapon attack against the creature." if valid else "A superiority die is expended when you use it. You regain all of your expended superiority dice when you finish a short or long rest. (``!g sr``)"}} {{"(" + pgNum + ")" if str(showpage) else ""}} [{{get_cc(counter)}} / {{get_cc_max(counter)}}]"
+-phrase "**Riposte.** {{"When a creature misses you with a melee attack, you can use your reaction and expend one superiority die to make a melee weapon attack against the creature." if valid else "A superiority die is expended when you use it. You regain all of your expended superiority dice when you finish a short or long rest. (``!g sr``)"}} {{"(" + pgNum + ") " if str(showpage) == "true" else ""}}[{{get_cc(counter)}} / {{get_cc_max(counter)}}]"
 ```
 
 ### Personalization Options
