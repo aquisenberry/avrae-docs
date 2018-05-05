@@ -27,7 +27,7 @@ Run the command in the **Code** section. It will automatically setup counters an
 {{mod_cc(counter, -1) if valid else ""}}
 {{set("sd", "8" if lvl < 10 else "10" if lvl < 18 else "12")}}
 -d1 "1d{{sd}} [lunging]"
--phrase "**Lunging Attack.** You have advantage on your next attack roll against that creature this turn. {{"(" + pgNum + ")" if str(showpage) == "true" else ""}} [{{get_cc(counter)}} / {{get_cc_max(counter)}}]"
+-phrase "**Lunging Attack.** When you make a melee weapon attack on your turn, you can expend one superiority die to increase your reach for that attack by 5 feet. {{"(" + pgNum + ") " if str(showpage) == "true" else ""}}[{{get_cc(counter)}} / {{get_cc_max(counter)}}]"
 ```
 
 ### Personalization Options
